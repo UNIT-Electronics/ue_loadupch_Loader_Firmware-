@@ -1,0 +1,20 @@
+/* custom.css */
+
+div#top_nav nav {
+    background-color: var(--mainNavColor); /* Cambia este valor por el color que desees */
+    box-sizing: border-box;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Ejemplo de color personalizado */
+div#top_nav nav {
+    background-color: hsl(182, 11%, 47%); /* Verde */
+    box-sizing: border-box;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
