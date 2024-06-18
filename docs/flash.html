@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Index &mdash; Loadupch 0.0.1 documentation</title>
+  <title>Upload firmware &mdash; Loadupch 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
@@ -24,12 +25,13 @@
         <script>let toggleHintHide = 'Click to hide';</script>
         <script>let toggleOpenOnPrint = 'true';</script>
         <script src="_static/togglebutton.js?v=4a39c7ea"></script>
-        <script src="_static/tabs.js?v=3030b3cb"></script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="#" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Examples" href="examples.html" />
+    <link rel="prev" title="Usage" href="usage.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -53,10 +55,13 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="flash.html">Upload firmware</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Upload firmware</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#verify-firmware-loaded">Verify firmware loaded</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="error.html">Unpaired Device</a></li>
 <li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
@@ -76,8 +81,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Index</li>
+      <li class="breadcrumb-item active">Upload firmware</li>
       <li class="wy-breadcrumbs-aside">
+            <a href="_sources/flash.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -85,17 +91,47 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
+  <section id="upload-firmware">
+<h1>Upload firmware<a class="headerlink" href="#upload-firmware" title="Link to this heading"></a></h1>
+<p>For the upload firmware, press the “flash firmware” button.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Only <code class="docutils literal notranslate"><span class="pre">.bin</span></code> files are supported.</p>
 </div>
+<p>Automatically the software open the file dialog, you can select the firmware file and press the “open” button.</p>
+<figure class="align-center" id="id1">
+<span id="figure-flash-firmware"></span><a class="reference internal image-reference" href="_images/loadupch_firmware.png"><img alt="flash firmware" src="_images/loadupch_firmware.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Flash firmware dialog</span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The software will show the message “Firmware flashed” and the device will be ready to use.</p>
+<figure class="align-center" id="id2">
+<span id="figure-success"></span><a class="reference internal image-reference" href="_images/success_flas.png"><img alt="success" src="_images/success_flas.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Firmware flashed message</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<section id="verify-firmware-loaded">
+<h2>Verify firmware loaded<a class="headerlink" href="#verify-firmware-loaded" title="Link to this heading"></a></h2>
+<p>To verify the firmware loaded, press the “verify firmware” button.</p>
+<figure class="align-center" id="id3">
+<span id="figure-verify"></span><a class="reference internal image-reference" href="_images/verify_firmware.png"><img alt="verify firmware" src="_images/verify_firmware.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Verify firmware dialog</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>The software will show the message “Firmware verified” if the firmware is loaded correctly.</p>
+</section>
+</section>
 
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="usage.html" class="btn btn-neutral float-left" title="Usage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="examples.html" class="btn btn-neutral float-right" title="Examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 

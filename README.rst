@@ -1,7 +1,14 @@
 Loadupch
 ========
 
-Project dedicated to uploading firmware to the CH552 microcontroller, specifically developed for compatibility with the Cocket Nova development board. The project features a simple design and uses a USB communication interface. It is developed with Python 3.9 for use on both Windows and Linux platforms.
+.. warning::
+    
+    Loadupch is freely available for use. However, the software is currently under development and may contain bugs.
+
+Overview
+========
+
+Loadupch is a specialized project designed for uploading firmware to the CH552 microcontroller, tailored specifically for use with the Cocket Nova development board. This project boasts a streamlined design and utilizes a USB communication interface for operations. It is developed in Python 3.9 and supports both Windows and Linux operating systems.
 
 .. figure:: src/source/_static/loadupch.png
    :align: center
@@ -11,9 +18,6 @@ Project dedicated to uploading firmware to the CH552 microcontroller, specifical
 
 License
 =======
-The Loadupch is licensed under the `GPL-3.0` license. For more information, see the `LICENSE <./LICENSE>`_ file.
 
-acknowledgements
-================
+Loadupch is licensed under the GPL-3.0 license. For more information, please refer to the `LICENSE <./LICENSE>`_ file in the project repository.
 
-The Loadupch project is based on the work of Stefan Wagner. 
