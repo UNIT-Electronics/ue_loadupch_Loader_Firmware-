@@ -64,7 +64,7 @@
 
 
 \title{Loadupch}
-\date{Jun 14, 2024}
+\date{Jun 18, 2024}
 \release{0.0.1}
 \author{Unit Electronics}
 \newcommand{\sphinxlogo}{\sphinxincludegraphics{Logo-UNIT_Web-04-800x182.png}\par}
@@ -85,37 +85,29 @@
 \phantomsection\label{\detokenize{index::doc}}
 
 
+\begin{sphinxadmonition}{warning}{Warning:}
 \sphinxAtStartPar
-The Loadupch is a software dedicated to up loader firmware to CH552 microcontroller. The software
-is written in Python and uses the PyUSB library to communicate with the device.
+Loadupch is freely available for use. However, the software is currently under development and may contain bugs.
+\end{sphinxadmonition}
 
 \sphinxAtStartPar
-This documentation is divided into the following sections:
+Loadupch is a software tool specifically designed for uploading firmware to the CH552 microcontroller.
+Developed in Python, this application leverages the PyUSB library to facilitate communication with the device.
 
-\sphinxstepscope
-
-
-\chapter{Introduction}
-\label{\detokenize{about:introduction}}\label{\detokenize{about::doc}}
 \sphinxAtStartPar
-The Loadupch is a implementation of a loader of Stefan Wagner for CH552 microcontroller.
-Compatible with a flash  of file Makefile. The project originally was written for Linux,
-but it is possible to run on Windows.
-The software is written in Python and uses the PyUSB library to communicate with the device.
+Loadupch is based on the loader implementation by Stefan Wagner, available at \sphinxhref{https://github.com/wagiminator}{Stefan Wagner’s GitHub}.
+Originally inspired by the \sphinxcode{\sphinxupquote{chprog.py}} project found at \sphinxhref{https://github.com/wagiminator/CH552-USB-OLED/tree/main/software/cdc\_i2c\_bridge/tools}{chprog.py on GitHub},
+Loadupch enhances the original by introducing a graphical user interface, making it significantly more user\sphinxhyphen{}friendly.
 
 \begin{figure}[htbp]
 \centering
 \capstart
 
 \noindent\sphinxincludegraphics{{loadupch}.png}
-\caption{Loadupch interface}\label{\detokenize{about:id1}}
-\begin{sphinxlegend}
-\begin{sphinxadmonition}{tip}{Tip:}
+\caption{Loadupch interface}\label{\detokenize{index:id1}}\end{figure}
+
 \sphinxAtStartPar
-Compared to the original project, the Loadupch has a graphical interface and is more user\sphinxhyphen{}friendly.
-\end{sphinxadmonition}
-\end{sphinxlegend}
-\end{figure}
+This documentation is divided into the following sections:
 
 \sphinxstepscope
 
@@ -124,23 +116,14 @@ Compared to the original project, the Loadupch has a graphical interface and is 
 \label{\detokenize{installation:installation}}\label{\detokenize{installation::doc}}
 \begin{sphinxadmonition}{warning}{Warning:}
 \sphinxAtStartPar
-The Loadupch is a project under development. The software is not stable and may have bugs.
+Loadupch is freely available for use. However, the software is currently under development and may contain bugs.
 \end{sphinxadmonition}
 
 
 \section{Requirements}
 \label{\detokenize{installation:requirements}}
 \sphinxAtStartPar
-The Loadupch requires the following software:
-\begin{itemize}
-\item {} 
-\sphinxAtStartPar
-\sphinxhref{https://www.python.org/}{Python 3.6 or higher}
-
-\end{itemize}
-
-\sphinxAtStartPar
-The Loadupch requires the following libraries:
+Loadupch requires  \sphinxhref{https://www.python.org/}{Python 3.6 or higher} and the following libraries:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 pip\PYG{+w}{ }install\PYG{+w}{ }pyusb
@@ -160,6 +143,23 @@ For easy installation, you can use the following command:
 pip\PYG{+w}{ }install\PYG{+w}{ }loadupch
 \end{sphinxVerbatim}
 
+
+\section{Driver Installation}
+\label{\detokenize{installation:driver-installation}}
+\begin{sphinxuseclass}{sphinx-tabs}
+\sphinxAtStartPar
+Windows
+
+\sphinxAtStartPar
+To install the driver, you can use the Zadig software. Download the latest version of \sphinxcode{\sphinxupquote{Zadig}}. You can download it from the official website.
+\begin{quote}
+
+
+\end{quote}
+
+\sphinxAtStartPar
+Ubuntu
+
 \sphinxAtStartPar
 If you use Linux, you may need to install the following packages:
 
@@ -167,33 +167,7 @@ If you use Linux, you may need to install the following packages:
 sudo\PYG{+w}{ }apt\PYGZhy{}get\PYG{+w}{ }install\PYG{+w}{ }libusb\PYGZhy{}1.0\PYGZhy{}0\PYGZhy{}dev\PYG{+w}{ }libudev\PYGZhy{}dev
 \end{sphinxVerbatim}
 
-\begin{sphinxadmonition}{note}{Note:}
-\sphinxAtStartPar
-For more information, you can check the documention \sphinxhref{https://github.com/UNIT-Electronics/CH55x\_SDCC\_Doc}{Documentation for Compiled examples} on the section CH55x with SDCC and Ubuntu
-\end{sphinxadmonition}
-
-
-\section{Usage}
-\label{\detokenize{installation:usage}}
-\sphinxAtStartPar
-To use the Loadupch, you need to connect the CH552 microcontroller to the USB port of your computer.
-Then, you can run the following command:
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-python\PYG{+w}{ }\PYGZhy{}m\PYG{+w}{ }loadupch
-\end{sphinxVerbatim}
-
-\sphinxAtStartPar
-The software will open a window with the interface. You can select the device press the “Connect” button.
-
-\begin{sphinxadmonition}{note}{Note:}
-\sphinxAtStartPar
-Before connect the device, press the “boot” button on the CH552 board.
-\end{sphinxadmonition}
-
-\sphinxAtStartPar
-After that, you can select the firmware file and press the “flash firmware” button.
-
+\end{sphinxuseclass}
 
 \section{Uninstallation}
 \label{\detokenize{installation:uninstallation}}
@@ -248,11 +222,13 @@ The interface will show the message “Device connected” and you can select th
 \noindent\sphinxincludegraphics[width=0.500\linewidth]{{device_found}.png}
 \caption{Device found message}\label{\detokenize{usage:id3}}\label{\detokenize{usage:figure-message}}\end{figure}
 
+\sphinxstepscope
 
-\chapter{Flash firmware}
-\label{\detokenize{usage:flash-firmware}}
+
+\chapter{Upload firmware}
+\label{\detokenize{flash:upload-firmware}}\label{\detokenize{flash::doc}}
 \sphinxAtStartPar
-For the up load firmware, press the “flash firmware” button.
+For the upload firmware, press the “flash firmware” button.
 
 \begin{sphinxadmonition}{note}{Note:}
 \sphinxAtStartPar
@@ -267,7 +243,7 @@ Automatically the software open the file dialog, you can select the firmware fil
 \capstart
 
 \noindent\sphinxincludegraphics[width=0.500\linewidth]{{loadupch_firmware}.png}
-\caption{Flash firmware dialog}\label{\detokenize{usage:id4}}\label{\detokenize{usage:figure-flash-firmware}}\end{figure}
+\caption{Flash firmware dialog}\label{\detokenize{flash:id1}}\label{\detokenize{flash:figure-flash-firmware}}\end{figure}
 
 \sphinxAtStartPar
 The software will show the message “Firmware flashed” and the device will be ready to use.
@@ -277,11 +253,11 @@ The software will show the message “Firmware flashed” and the device will be
 \capstart
 
 \noindent\sphinxincludegraphics[width=0.500\linewidth]{{success_flas}.png}
-\caption{Firmware flashed message}\label{\detokenize{usage:id5}}\label{\detokenize{usage:figure-success}}\end{figure}
+\caption{Firmware flashed message}\label{\detokenize{flash:id2}}\label{\detokenize{flash:figure-success}}\end{figure}
 
 
 \section{Verify firmware loaded}
-\label{\detokenize{usage:verify-firmware-loaded}}
+\label{\detokenize{flash:verify-firmware-loaded}}
 \sphinxAtStartPar
 To verify the firmware loaded, press the “verify firmware” button.
 
@@ -290,7 +266,7 @@ To verify the firmware loaded, press the “verify firmware” button.
 \capstart
 
 \noindent\sphinxincludegraphics[width=0.500\linewidth]{{verify_firmware}.png}
-\caption{Verify firmware dialog}\label{\detokenize{usage:id6}}\label{\detokenize{usage:figure-verify}}\end{figure}
+\caption{Verify firmware dialog}\label{\detokenize{flash:id3}}\label{\detokenize{flash:figure-verify}}\end{figure}
 
 \sphinxAtStartPar
 The software will show the message “Firmware verified” if the firmware is loaded correctly.
@@ -310,21 +286,20 @@ There exists a repository with examples for the Cocket Nova CH552 board, which y
 \end{sphinxadmonition}
 
 \sphinxAtStartPar
-This repository provides examples for developing software in C using the SDCC compiler for the CH552 microcontroller. It serves as an excellent resource for both beginners and experienced developers, offering versatile and affordable solutions for CH552 development.
-
-\sphinxAtStartPar
-Although the examples are written in C, you can use Loadupch to upload the firmware to the CH552 microcontroller. Loadupch is software dedicated to uploading firmware to the CH552 microcontroller.
+The repository provides examples for developing software in C using the SDCC compiler for the CH552 microcontroller. It serves as an excellent resource for both beginners and experienced developers, offering versatile and affordable solutions for code development.
 
 \sphinxAtStartPar
 Clone the repository and follow the instructions to compile and upload the firmware to the CH552 microcontroller:
+\begin{quote}
 
 
+\end{quote}
 
 
-\section{Flash Firmware Using Loadupch}
-\label{\detokenize{examples:flash-firmware-using-loadupch}}
+\section{Upload Firmware Using Loadupch}
+\label{\detokenize{examples:upload-firmware-using-loadupch}}
 \sphinxAtStartPar
-To flash the firmware using Loadupch, follow the steps below:
+To upload the firmware using Loadupch, follow the steps below:
 \begin{enumerate}
 \sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
 \item {} 
@@ -355,10 +330,32 @@ python\PYG{+w}{ }\PYGZhy{}m\PYG{+w}{ }loadupch
 \sphinxAtStartPar
 Press the \sphinxcode{\sphinxupquote{\textasciigrave{}boot\textasciigrave{}}} button on the CH552 board and connect the device to the USB port of your computer.
 
+\end{enumerate}
+
+\begin{figure}[htbp]
+\centering
+\capstart
+
+\noindent\sphinxincludegraphics[width=0.800\linewidth]{{CH552_boot}.png}
+\caption{Cocket Nova CH552 button boot}\label{\detokenize{examples:id1}}\label{\detokenize{examples:figure-flash2}}\end{figure}
+\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\setcounter{enumi}{3}
 \item {} 
 \sphinxAtStartPar
 Press the \sphinxcode{\sphinxupquote{\textasciigrave{}Connect\textasciigrave{}}} button on the Loadupch interface.
 
+\end{enumerate}
+
+\begin{figure}[htbp]
+\centering
+\capstart
+
+\noindent\sphinxincludegraphics[width=0.500\linewidth]{{loadupch_connect}.png}
+\caption{Loadupch interface}\label{\detokenize{examples:id2}}\label{\detokenize{examples:figure-connect2}}\end{figure}
+\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\setcounter{enumi}{4}
 \item {} 
 \sphinxAtStartPar
 Select the firmware file from the \sphinxcode{\sphinxupquote{Software/examples/Blink}} repository and press the \sphinxcode{\sphinxupquote{\textasciigrave{}flash firmware\textasciigrave{}\textasciigrave{}}} button.
@@ -369,8 +366,8 @@ Select the firmware file from the \sphinxcode{\sphinxupquote{Software/examples/B
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics[width=1.000\linewidth]{{example_blink}.png}
-\caption{Path to example blink}\label{\detokenize{examples:id1}}\label{\detokenize{examples:figure-example}}\end{figure}
+\noindent\sphinxincludegraphics[width=0.600\linewidth]{{example_blink}.png}
+\caption{Path to example blink}\label{\detokenize{examples:id3}}\label{\detokenize{examples:figure-example}}\end{figure}
 \begin{enumerate}
 \sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
 \setcounter{enumi}{5}
@@ -389,7 +386,7 @@ Finally, press the \sphinxcode{\sphinxupquote{\textasciigrave{}run programmer Ex
 \capstart
 
 \noindent\sphinxincludegraphics[width=0.800\linewidth]{{led}.png}
-\caption{Blink example}\label{\detokenize{examples:id2}}\label{\detokenize{examples:figure-flash-firmware}}\end{figure}
+\caption{Blink example}\label{\detokenize{examples:id4}}\label{\detokenize{examples:figure-flash-firmware}}\end{figure}
 
 \sphinxstepscope
 
