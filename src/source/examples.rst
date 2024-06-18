@@ -4,24 +4,25 @@ Examples
 .. note::
    There exists a repository with examples for the Cocket Nova CH552 board, which you can find here:
 
-    .. raw:: html
-        
-        <a href="https://github.com/UNIT-Electronics/CH55x_SDCC_Examples" target="_blank">CH552 SDCC examples</a>
+      .. raw:: html
+      
+         <a href="https://github.com/UNIT-Electronics/CH55x_SDCC_Examples" target="_blank">CH552 SDCC examples</a>
+         <br> </br>
 
-This repository provides examples for developing software in C using the SDCC compiler for the CH552 microcontroller. It serves as an excellent resource for both beginners and experienced developers, offering versatile and affordable solutions for CH552 development.
-
-Although the examples are written in C, you can use Loadupch to upload the firmware to the CH552 microcontroller. Loadupch is software dedicated to uploading firmware to the CH552 microcontroller. 
+The repository provides examples for developing software in C using the SDCC compiler for the CH552 microcontroller. It serves as an excellent resource for both beginners and experienced developers, offering versatile and affordable solutions for code development.
 
 Clone the repository and follow the instructions to compile and upload the firmware to the CH552 microcontroller:
 
-.. raw:: html
+   .. raw:: html
 
-   <a href="https://github.com/UNIT-Electronics/CH55x_SDCC_Doc" target="_blank">Documentation for Compiled examples</a>
+      <a href="https://github.com/UNIT-Electronics/CH55x_SDCC_Doc" target="_blank">Documentation for Compiled examples</a>
+      <br> </br>
 
-Flash Firmware Using Loadupch
+      
+Upload Firmware Using Loadupch
 -----------------------------
 
-To flash the firmware using Loadupch, follow the steps below:
+To upload the firmware using Loadupch, follow the steps below:
 
 1. Clone the repository with the examples:
 
@@ -37,7 +38,26 @@ To flash the firmware using Loadupch, follow the steps below:
 
 3. Press the ```boot``` button on the CH552 board and connect the device to the USB port of your computer.
 
+.. _figure_flash2:
+.. figure:: /_static/CH552_boot.png
+    :align: center
+    :alt: button boot
+    :width: 80%
+
+    Cocket Nova CH552 button boot
+
+
 4. Press the ```Connect``` button on the Loadupch interface.
+
+.. _figure_connect2:
+
+.. figure:: /_static/loadupch_connect.png
+   :align: center
+   :alt: Loadupch interface
+   :width: 50%
+
+   Loadupch interface
+
 
 5. Select the firmware file from the ``Software/examples/Blink`` repository and press the ```flash firmware```` button.
 
@@ -45,7 +65,7 @@ To flash the firmware using Loadupch, follow the steps below:
 .. figure:: /_static/example_blink.png
    :align: center
    :alt: example blink
-   :width: 100%
+   :width: 60%
 
    Path to example blink
 

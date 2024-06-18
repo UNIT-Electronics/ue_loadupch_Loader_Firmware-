@@ -2,15 +2,13 @@ Installation
 ============
 
 .. warning::
-    The Loadupch is a project under development. The software is not stable and may have bugs.
+
+    Loadupch is freely available for use. However, the software is currently under development and may contain bugs.
+
 
 Requirements
 ------------
-The Loadupch requires the following software:
-
-- `Python 3.6 or higher <https://www.python.org/>`_
-
-The Loadupch requires the following libraries:
+Loadupch requires  `Python 3.6 or higher <https://www.python.org/>`_ and the following libraries:
 
 .. code-block:: bash
 
@@ -20,45 +18,44 @@ The Loadupch requires the following libraries:
 
     pip install tkinter
 
+
 Loadupch Installation
------------------
+---------------------
 
 For easy installation, you can use the following command:
+
 
 .. code-block:: bash
 
     pip install loadupch
 
-If you use Linux, you may need to install the following packages:
 
-.. code-block:: bash
+Driver Installation
+-------------------
 
-    sudo apt-get install libusb-1.0-0-dev libudev-dev
+.. tabs:: 
 
-.. note::
+    .. tab:: Windows
+            
+        To install the driver, you can use the Zadig software. Download the latest version of ``Zadig``. You can download it from the official website.
+        
+            .. raw:: html
 
-    For more information, you can check the documention `Documentation for Compiled examples <https://github.com/UNIT-Electronics/CH55x_SDCC_Doc>`_ on the section CH55x with SDCC and Ubuntu
-    
+                <a href="https://zadig.akeo.ie/" target="_blank">Zadig</a>
+        
+    .. tab:: Ubuntu
+        If you use Linux, you may need to install the following packages:
 
+        .. code-block:: bash
 
-
-Usage
------
-
-To use the Loadupch, you need to connect the CH552 microcontroller to the USB port of your computer. 
-Then, you can run the following command:
-
-.. code-block:: bash
-
-    python -m loadupch
-
-The software will open a window with the interface. You can select the device press the "Connect" button.
-
-.. note::
-    Before connect the device, press the "boot" button on the CH552 board.
+            sudo apt-get install libusb-1.0-0-dev libudev-dev
 
 
-After that, you can select the firmware file and press the "flash firmware" button.
+
+
+
+
+
 
 
 Uninstallation

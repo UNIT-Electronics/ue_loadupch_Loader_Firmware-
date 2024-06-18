@@ -3,12 +3,29 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Loadupch's documentation!
-====================================
+Loadupch v0.0.1
+========================
 
 
-The Loadupch is a software dedicated to up loader firmware to CH552 microcontroller. The software 
-is written in Python and uses the PyUSB library to communicate with the device. 
+.. warning::
+    
+    Loadupch is freely available for use. However, the software is currently under development and may contain bugs.
+
+
+
+Loadupch is a software tool specifically designed for uploading firmware to the CH552 microcontroller. 
+Developed in Python, this application leverages the PyUSB library to facilitate communication with the device.
+
+Loadupch is based on the loader implementation by Stefan Wagner, available at `Stefan Wagner's GitHub <https://github.com/wagiminator>`_.
+Originally inspired by the ``chprog.py`` project found at `chprog.py on GitHub <https://github.com/wagiminator/CH552-USB-OLED/tree/main/software/cdc_i2c_bridge/tools>`_,
+Loadupch enhances the original by introducing a graphical user interface, making it significantly more user-friendly.
+
+.. figure:: /_static/loadupch.png
+   :align: center
+   :alt: Loadupch interface
+
+   Loadupch interface
+
 
 This documentation is divided into the following sections:
 
@@ -16,9 +33,9 @@ This documentation is divided into the following sections:
    :maxdepth: 2
    :caption: Contents:
    
-   about
    installation
    usage
+   flash
    examples
    error
    license
