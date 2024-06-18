@@ -1,6 +1,7 @@
 # Loadupch
 
-> **Warning:** Loadupch is freely available for use. However, the software is currently under development and may contain bugs.
+> [!CAUTION]  
+> Loadupch is freely available for use. However, the software is currently under development and may contain bugs.
 
 ## Overview
 
