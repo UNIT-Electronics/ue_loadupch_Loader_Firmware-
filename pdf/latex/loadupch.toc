@@ -10,9 +10,4 @@
 \contentsline {chapter}{\numberline {4}Examples}{9}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Upload Firmware Using Loadupch}{9}{section.4.1}%
 \contentsline {chapter}{\numberline {5}Unpaired Device}{13}{chapter.5}%
-\contentsline {chapter}{\numberline {6}License}{17}{chapter.6}%
-\contentsline {section}{\numberline {6.1}GNU GENERAL PUBLIC LICENSE}{17}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Preamble}{17}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Terms and Conditions}{18}{section.6.3}%
-\contentsline {section}{\numberline {6.4}How to Apply These Terms to Your New Programs}{24}{section.6.4}%
-\contentsline {chapter}{\numberline {7}Indices and tables}{27}{chapter.7}%
+\contentsline {chapter}{\numberline {6}Indices and tables}{17}{chapter.6}%

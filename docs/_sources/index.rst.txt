@@ -38,9 +38,7 @@ This documentation is divided into the following sections:
    flash
    examples
    error
-   license
-   contact
-   acknowledgements
+
 
 
 
